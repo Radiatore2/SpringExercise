@@ -23,11 +23,11 @@ public class ControllerLibri {
 		return fullList();
 	}
 	@GetMapping("/libri/{id}")
-	public List<Libro> bookId(@PathVariable int id){
+	public Libro bookId(@PathVariable int id){
 
 		for(Libro libro : listaLibri){
 			if (libro.getId() == id){
-				return listaLibri;
+				return libro;
 			}
 		}
 		return null;
