@@ -1,4 +1,4 @@
-package com.example.ExRepo2.entity;
+package com.example.Ex2Repository.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
