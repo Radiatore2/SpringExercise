@@ -1,4 +1,4 @@
-package com.example.Hibernate;
+package Ex1Hibernare.Ex1Hibernate;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;

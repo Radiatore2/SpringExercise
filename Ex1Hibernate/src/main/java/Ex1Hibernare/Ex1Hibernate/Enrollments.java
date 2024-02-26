@@ -1,4 +1,4 @@
-package com.example.Hibernate;
+package Ex1Hibernare.Ex1Hibernate;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -18,7 +18,7 @@ public class Enrollments {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private Students students;
+    private com.example.Hibernate.Students students;
 
     @ManyToMany
     private List<Classes> classes;

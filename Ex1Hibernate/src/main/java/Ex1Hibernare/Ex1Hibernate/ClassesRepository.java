@@ -1,4 +1,4 @@
-package com.example.Hibernate;
+package Ex1Hibernare.Ex1Hibernate;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
