@@ -14,9 +14,9 @@ public class StudentController {
 	@Autowired
 	private StudentService studentService;
 
-	@PutMapping("/add")
-	public void createStudent(@RequestBody Student student){
-		studentRepository.save(student);
+	@PostMapping("/add")
+	public Student createStudent(@RequestBody Student student){
+		return studentRepository.save(student);
 	}
 
 	@GetMapping("/list")
