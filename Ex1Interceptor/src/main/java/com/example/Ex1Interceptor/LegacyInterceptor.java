@@ -13,7 +13,7 @@ public class LegacyInterceptor implements HandlerInterceptor {
 		if(request.getRequestURL().toString().contains("/legacy")){
 			response.setStatus(404);
 		}
-		return true;
+		return false;
 	}
 
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, @Nullable ModelAndView modelAndView) throws Exception {
