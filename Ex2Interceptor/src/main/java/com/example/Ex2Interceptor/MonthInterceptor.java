@@ -29,7 +29,7 @@ public class MonthInterceptor implements HandlerInterceptor {
 		String monthNumberString = request.getHeader("monthNumber");
 		if (monthNumberString==null || monthNumberString.isEmpty()){
 			response.setStatus(HttpStatus.BAD_REQUEST.value());
-			return true;
+			return false;
 		}
 		int monthNumber = Integer.parseInt(monthNumberString);
 		Optional<Month> month = finalList.stream().filter(singleMonth->{
@@ -38,7 +38,11 @@ public class MonthInterceptor implements HandlerInterceptor {
 		if (month.isPresent()) {
 			response.setStatus(HttpStatus.OK.value());
 			request.setAttribute("MonthInterceptor-Month", month.get());
-		} return true;
+		} else {
+			Month emptyMonth = new Month(0, "nope", "nope", "nope");
+			request.setAttribute("MonthInterceptor-Month", emptyMonth);
+		}
+		return true;
 	}
 
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, @Nullable ModelAndView modelAndView) throws Exception {
