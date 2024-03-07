@@ -1,7 +1,7 @@
 package com.example.Ex1CustomQuerry;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,7 +17,7 @@ public class FlightController {
 
 	private int numFlights = 50;
 
-	@GetMapping("/provision")
+	@PostMapping("/provision")
 	public void provisionFlight(){
 		Random random = new Random();
 
