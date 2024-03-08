@@ -7,11 +7,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/time")
 public class BasicController {
-	private APILoggingInterceptor apiInterceptor;
+	//private APILoggingInterceptor apiInterceptor;
 
 
-	@GetMapping()
+	@GetMapping
 	public String getCurrentDateTime() {
 		return "Current Date/Time: " + java.time.LocalDateTime.now();
+	}
+	@GetMapping("/ciao")
+	public String ciao(){
+		return "ciao";
 	}
 }
