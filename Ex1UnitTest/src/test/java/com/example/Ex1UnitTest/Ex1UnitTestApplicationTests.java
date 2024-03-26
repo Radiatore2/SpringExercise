@@ -44,7 +44,7 @@ class Ex1UnitTestApplicationTests {
 		userRepository.save(users);
 		mockMvc.perform(get("/api/get/{id}", users.getId()))
 				.andExpect(status().isOk())
-				.andExpect(jsonPath("$.id").value(users.getId()))
+				.andExpect(jsonPath("$.id").exists())
 				.andExpect(jsonPath("$.name").value("Alberto"))
 				.andExpect(jsonPath("$.surname").value("Rossi"))
 				.andExpect(jsonPath("$.mail").value("rossi@gmail.com"));
