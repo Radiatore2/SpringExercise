@@ -1,0 +1,20 @@
+server:
+  port: 7070
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+myCustomVarTree:
+  customVar: Hello from Test
+server:
+  port: 4000
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+myCustomVarTree:
+  customVar: Hello from Prod
+server:
+  port: 8000
